@@ -1,0 +1,20 @@
+{
+    "name": "magento/module-custom-navigation",
+    "description": "N/A",
+    "require": {
+        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "BlottedScience\\CustomNavigation\\": ""
+        }
+    }
+}

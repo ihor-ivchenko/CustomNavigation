@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-with-filter"/>
+        <referenceContainer name="div.sidebar.main">
+            <!-- below is the virtual type of the core navigation we created -->
+            <block class="BlottedScience\CustomNavigation\Block\Navigation\CustomNavigation" name="custom.leftnav" before="-" template="Magento_LayeredNavigation::layer/view.phtml">
+                <block class="Magento\LayeredNavigation\Block\Navigation\State" name="catalog.navigation.state" as="state" />
+                <block class="Magento\LayeredNavigation\Block\Navigation\FilterRenderer" name="catalog.navigation.renderer" as="renderer" template="Magento_LayeredNavigation::layer/filter.phtml"/>
+            </block>
+        </referenceContainer>
+        <referenceContainer	name="content">
+            <block class="BlottedScience\CustomNavigation\Block\Product\View" name="office.hello" template="BlottedScience_CustomNavigation::product/view.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

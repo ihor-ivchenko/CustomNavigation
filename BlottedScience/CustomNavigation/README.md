@@ -1,0 +1,1 @@
+Layered navigation for custom collection on custom page module
