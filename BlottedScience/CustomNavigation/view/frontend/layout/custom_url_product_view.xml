@@ -10,7 +10,14 @@
             </block>
         </referenceContainer>
         <referenceContainer	name="content">
-            <block class="BlottedScience\CustomNavigation\Block\Product\View" name="office.hello" template="BlottedScience_CustomNavigation::product/view.phtml"/>
+            <block class="BlottedScience\CustomNavigation\Block\Product\View" name="office.hello" template="BlottedScience_CustomNavigation::product/view.phtml">
+                <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="product_list_toolbar" template="Magento_Catalog::product/list/toolbar.phtml">
+                    <block class="Magento\Theme\Block\Html\Pager" name="product_list_toolbar_pager"/>
+                </block>
+                <action method="setToolbarBlockName">
+                    <argument name="name" xsi:type="string">product_list_toolbar</argument>
+                </action>
+            </block>
         </referenceContainer>
     </body>
 </page>
